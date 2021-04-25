@@ -14,12 +14,15 @@ import {Entypo} from '@expo/vector-icons';
 import wateringImg from '../../assets/watering.png';
 import colors from '../styles/colors';
 import fonts from '../styles/font';
+import { UserIdentification } from './UserIdentification';
 
 
 
 
 
 export function Welcome(){
+
+   
 
 
     return(
@@ -28,7 +31,9 @@ export function Welcome(){
                 <Text style={styles.title}>
                 Gerencie 
                 {'\n'}
-                suas plantas de {'\n'}forma fácil
+                suas plantas de 
+                {'\n'}
+                forma fácil
                 </Text>
 
               
@@ -36,6 +41,7 @@ export function Welcome(){
                 source={wateringImg} 
                 style={ styles.image}
                 resizeMode= "contain"
+                
                 />
                 
 
@@ -52,6 +58,7 @@ export function Welcome(){
                     <Entypo 
                         name="chevron-right" 
                         style={styles.buttonIcon} 
+                        onPress={UserIdentification}
                     />
                 </TouchableOpacity>
             </View>   
@@ -82,7 +89,7 @@ const styles = StyleSheet.create({
     },
     subtitle:{
         fontSize: 18,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
         textAlign: 'center',
         color: colors.heading,
         fontFamily: fonts.text,
